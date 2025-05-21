@@ -3,22 +3,45 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/INFINI7-RY/portal-aluno-backend.git",
-  "author": "Eduardo Riki, Yagho Petini",
+  "author": "Eduardo Riki e Yagho Petini",
   "license": "MIT",
   "scripts": {
     "start": "node dist/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build": "tsc"
+    "seed": "ts-node prisma/seed.ts",
+    "migrate": "prisma migrate dev",
+    "migrate:reset": "prisma migrate reset",
+    "build": "tsc",
+    "lint": "eslint ."
   },
   "devDependencies": {
+    "@eslint/js": "^9.26.0",
     "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.18",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^16.1.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.3.3",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
   },
   "dependencies": {
     "@prisma/client": "^6.7.0",
+    "@types/uuid": "^10.0.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "prisma": "^6.7.0"
+    "http-errors": "^2.0.0",
+    "prisma": "^6.8.1",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.4"
   }
 }

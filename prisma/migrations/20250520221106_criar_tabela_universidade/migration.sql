@@ -1,7 +1,7 @@
 -- CreateTable
 CREATE TABLE "Universidade" (
     "uuid" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
+    "nome" TEXT NOT NULL,
     "sigla" TEXT NOT NULL,
     "cnpj" TEXT NOT NULL,
     "criadoEm" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
