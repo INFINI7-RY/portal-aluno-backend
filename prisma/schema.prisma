@@ -9,7 +9,7 @@ datasource db {
 
 model Universidade {
   uuid        String   @id @default(cuid())
-  name        String
+  nome        String
   sigla       String   @unique
   cnpj        String   @unique
   criadoEm    DateTime @default(now())
